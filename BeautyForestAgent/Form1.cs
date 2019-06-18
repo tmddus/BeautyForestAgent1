@@ -15,5 +15,11 @@ namespace BeautyForestAgent
         {
             InitializeComponent();
         }
+
+
+        private void BtnTray_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
