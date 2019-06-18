@@ -76,6 +76,7 @@
             this.notiTray.ContextMenuStrip = this.cmsMenu;
             this.notiTray.Icon = ((System.Drawing.Icon)(resources.GetObject("notiTray.Icon")));
             this.notiTray.Text = "트레이 아이콘";
+            this.notiTray.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotiTray_MouseDoubleClick);
             // 
             // cmsMenu
             // 
@@ -84,19 +85,21 @@
             this.폼보이기ToolStripMenuItem,
             this.종료ToolStripMenuItem});
             this.cmsMenu.Name = "cmsMenu";
-            this.cmsMenu.Size = new System.Drawing.Size(123, 48);
+            this.cmsMenu.Size = new System.Drawing.Size(181, 70);
             // 
             // 폼보이기ToolStripMenuItem
             // 
             this.폼보이기ToolStripMenuItem.Name = "폼보이기ToolStripMenuItem";
-            this.폼보이기ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.폼보이기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.폼보이기ToolStripMenuItem.Text = "폼보이기";
+            this.폼보이기ToolStripMenuItem.Click += new System.EventHandler(this.폼보이기ToolStripMenuItem_Click);
             // 
             // 종료ToolStripMenuItem
             // 
             this.종료ToolStripMenuItem.Name = "종료ToolStripMenuItem";
-            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.종료ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.종료ToolStripMenuItem.Text = "종료";
+            this.종료ToolStripMenuItem.Click += new System.EventHandler(this.종료ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -113,6 +116,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Beauty Forest Agent v0.1 by 3610 송승연";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.cmsMenu.ResumeLayout(false);
             this.ResumeLayout(false);
